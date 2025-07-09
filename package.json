@@ -1,0 +1,31 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Dmitry-Khodanitsky/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Dmitry-Khodanitsky/frontend-project-46/actions)",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitry-Khodanitsky/frontend-project-46.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmitry-Khodanitsky/frontend-project-46/issues"
+  },
+  "homepage": "https://github.com/Dmitry-Khodanitsky/frontend-project-46#readme",
+  "dependencies": {
+    "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^1.9.0",
+    "@stylistic/eslint-plugin": "^5.1.0",
+    "eslint": "^9.30.1"
+  }
+}
