@@ -12,3 +12,9 @@ publish:  #отладка публикации в npm репозиторий, п
 
 gendiff: #запуск приложения gendiff
 	node bin/gendiff.js
+
+test:
+	NODE_OPTIONS=--experimental-vm-modules npx jest
+
+test-coverage:
+	NODE_OPTIONS=--experimental-vm-modules npx jest --coverage
