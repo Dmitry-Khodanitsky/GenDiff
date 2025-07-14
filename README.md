@@ -6,4 +6,8 @@
 
 [![Node CI](https://github.com/Dmitry-Khodanitsky/frontend-project-46/actions/workflows/nodejs.yml/badge.svg?branch=main)](https://github.com/Dmitry-Khodanitsky/frontend-project-46/actions/workflows/nodejs.yml)
 
+### JSON format
 [![asciicast](https://asciinema.org/a/727322.svg)](https://asciinema.org/a/727322)
+
+### YML/YAML format
+[![asciicast](https://asciinema.org/a/727773.svg)](https://asciinema.org/a/727773)
