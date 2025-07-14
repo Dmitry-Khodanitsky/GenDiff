@@ -1,20 +1,25 @@
-import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { expect, test } from '@jest/globals'
 import { parseData, getDiff, formatText } from '../src/lib.js'
-import { jsonData, jsonData2, diffString, diffFormatString } from '../__fixtures__/testData.js'
+import {
+  jsonData,
+  jsonData2,
+  diffString,
+  diffFormatString,
+} from '../__fixtures__/testData.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const getFixturePath = filename =>
   path.join(__dirname, '..', '__fixtures__', filename)
-const readFixtureFile = filename =>
-  fs.readFileSync(getFixturePath(filename), 'utf-8')
 
+/* const readFixtureFile = filename =>
+  fs.readFileSync(getFixturePath(filename), 'utf-8')
+*/
 test('File parse test JSON', () => {
   const testFilePath = getFixturePath('file1.json')
-  const expected = (jsonData)
+  const expected = jsonData
   expect(parseData(testFilePath)).toEqual(expected)
 })
 

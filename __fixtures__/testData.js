@@ -11,10 +11,10 @@ const jsonData2 = {
   host: 'hexlet.io',
 }
 
-const diffString = '{"- follow":false,"= host":"hexlet.io","- proxy":"123.234.53.22","- timeout":50,"+ timeout":20,"+ verbose":true}'
+const diffString
+= '{"- follow":false,"= host":"hexlet.io","- proxy":"123.234.53.22","- timeout":50,"+ timeout":20,"+ verbose":true}'
 
-const diffFormatString = 
-`{ 
+const diffFormatString = `{ 
 - follow: false
   host: hexlet.io
 - proxy: 123.234.53.22
