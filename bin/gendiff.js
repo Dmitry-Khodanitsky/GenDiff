@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* global process */
 import { Command } from 'commander'
 import path from 'path'
 import { fileURLToPath } from 'url'
