@@ -6,10 +6,10 @@
     "gendiff": "bin/gendiff.js"
   },
   "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "scripts": {
+    "test": "jest"
   },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dmitry-Khodanitsky/frontend-project-46.git"
