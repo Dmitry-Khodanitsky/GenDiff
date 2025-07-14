@@ -14,7 +14,10 @@ gendiff: #запуск приложения gendiff
 	node bin/gendiff.js
 
 test:
-	NODE_OPTIONS=--experimental-vm-modules npx jest
+	npx jest
+
+watch:
+	npx jest --watch
 
 test-coverage:
-	NODE_OPTIONS=--experimental-vm-modules npx jest --coverage
+	npx jest --coverage
