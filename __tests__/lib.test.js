@@ -1,10 +1,11 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { expect, test } from '@jest/globals'
-import { parseData, getDiff, formatText } from '../src/lib.js'
+import { getDiff, formatText } from '../src/lib.js'
+import { parseData } from '../src/parse.js'
 import {
-  jsonData,
-  jsonData2,
+  objData,
+  objData2,
   diffString,
   diffFormatString,
 } from '../__fixtures__/testData.js'
@@ -17,19 +18,23 @@ const getFixturePath = filename =>
 /* const readFixtureFile = filename =>
   fs.readFileSync(getFixturePath(filename), 'utf-8')
 */
+
 test('File parse test JSON', () => {
   const testFilePath = getFixturePath('file1.json')
-  const expected = jsonData
+  const expected = objData
   expect(parseData(testFilePath)).toEqual(expected)
 })
 
-/*
-test('File parse test UML', () => {
-  const testFilePath = getFixturePath('file1.json')
-  const expected = jsonData
-  expect(parseData(testFilePath)).toEqual(expected)
+test('Parse YML file', () => {
+  const testFilePath = getFixturePath('file1.yml')
+  expect(parseData(testFilePath)).toEqual(objData)
 })
-*/
+
+test('Parse YAML file', () => {
+  const testFilePath = getFixturePath('file2.yaml')
+  expect(parseData(testFilePath)).toEqual(objData2)
+})
+
 test('Formating string by formatText function', () => {
   const expected = diffFormatString
   expect(formatText(diffString)).toEqual(expected)
@@ -37,5 +42,5 @@ test('Formating string by formatText function', () => {
 
 test('Get differences test', () => {
   const expected = diffFormatString
-  expect(getDiff(jsonData, jsonData2)).toEqual(expected)
+  expect(getDiff(objData, objData2)).toEqual(expected)
 })
