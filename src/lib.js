@@ -2,22 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import _ from 'lodash'
 
-function parseData(filepath) {
-  try {
-    switch (path.extname(filepath)) {
-      case '.json':
-        return JSON.parse(fs.readFileSync(filepath, 'utf-8'))
-      case '.yml':
-        return 'Тут будет функция для yml'
-      default:
-        throw new Error('Не подходящий формат файла')
-    }
-  }
-  catch (error) {
-    throw new Error(`Возникла ошибка в процессе парсинга: ${error.message}`)
-  }
-}
-
 function getDiff(parsedFile1, parsedFile2) {
   // собираем ключи объектов в один массив:
   const keys1 = Object.keys(parsedFile1)
@@ -65,4 +49,4 @@ function formatText(string) {
   return result
 }
 
-export { parseData, getDiff, formatText }
+export { getDiff, formatText }
