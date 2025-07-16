@@ -2,7 +2,7 @@
 import { Command } from 'commander'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { parseData, getDiff } from '../index.js'
+import { parseData, getDiff, formatDiffAsTree } from '../index.js'
 
 const program = new Command()
 
@@ -12,8 +12,8 @@ program
   .argument('<filepath2>')
   .description('Compares two configuration files and shows a difference.')
   .version('0.0.1')
-  .option('-f, --format', 'output format')
-  .action((filepath1, filepath2) => {
+  .option('-f, --format <type>', 'output format (default: stylish)', 'asTree')
+  .action((filepath1, filepath2, options) => {
     const __filename = fileURLToPath(import.meta.url)
     const __dirname = path.dirname(__filename)
 
@@ -29,11 +29,10 @@ program
       '..',
       filepath2,
     )
-
     const parsedFile1 = parseData(fullPathFile1.toLowerCase())
     const parsedFile2 = parseData(fullPathFile2.toLowerCase())
 
-    console.log(getDiff(parsedFile1, parsedFile2))
+    console.log(getDiff(parsedFile1, parsedFile2, options.format))
   })
 // добавить возможность передавать аргументы и вызывать тут функцию получения абсолютного пути
 program.parse()
