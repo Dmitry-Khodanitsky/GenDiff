@@ -12,7 +12,7 @@ program
   .argument('<filepath2>')
   .description('Compares two configuration files and shows a difference.')
   .version('0.0.1')
-  .option('-f, --format <type>', 'output format (default: stylish)', 'asTree')
+  .option('-f, --format <type>', 'output format (default: stylish)', 'stylish', 'plain')
   .action((filepath1, filepath2, options) => {
     const __filename = fileURLToPath(import.meta.url)
     const __dirname = path.dirname(__filename)
