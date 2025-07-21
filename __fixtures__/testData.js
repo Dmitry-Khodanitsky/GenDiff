@@ -169,4 +169,4 @@ const buildedTree = [
   },
 ]
 
-export { objData, objData2, getFixturePath, buildedTree }
+export { objData, objData2, getFixturePath, buildedTree, __dirname }
