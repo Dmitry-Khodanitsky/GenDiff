@@ -2,7 +2,7 @@
 import { Command } from 'commander'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { parseData, getDiff, formatDiffAsTree } from '../index.js'
+import { parseData, getDiff } from '../index.js'
 
 const program = new Command()
 
