@@ -11,3 +11,6 @@
 
 ### YML/YAML format
 [![asciicast](https://asciinema.org/a/727773.svg)](https://asciinema.org/a/727773)
+
+### stylish formatter
+[![asciicast](https://asciinema.org/a/jrGFSQTa2TSXs8zJnM9jA8raJ.svg)](https://asciinema.org/a/jrGFSQTa2TSXs8zJnM9jA8raJ) 
