@@ -32,7 +32,7 @@ function plain(tree) {
 
     return result.filter(Boolean)
   }
-  console.log((tree).join('\n'))
+
   return iter(tree).join('\n')
 }
 
