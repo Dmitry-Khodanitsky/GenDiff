@@ -66,7 +66,7 @@ const objData2 = {
 
 const buildedTree = [
   {
-    type: 'unchanged',
+    type: 'nested',
     name: 'common',
     children: [
       { type: 'added', name: 'follow', newValue: false, children: [] },
@@ -102,11 +102,11 @@ const buildedTree = [
         children: [],
       },
       {
-        type: 'unchanged',
+        type: 'nested',
         name: 'setting6',
         children: [
           {
-            type: 'unchanged',
+            type: 'nested',
             name: 'doge',
             children: [
               {
@@ -135,7 +135,7 @@ const buildedTree = [
     ],
   },
   {
-    type: 'unchanged',
+    type: 'nested',
     name: 'group1',
     children: [
       {
