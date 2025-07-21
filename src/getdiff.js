@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { stylish } from './stylish.js'
+import formatter from './formatters/index.js'
 
 function buildTree(parsedFile1, parsedFile2) {
   // собираем ключи объектов в один массив:
@@ -62,7 +62,7 @@ function buildTree(parsedFile1, parsedFile2) {
 
 function getDiff(parsedFile1, parsedFile2, format) {
   const tree = buildTree(parsedFile1, parsedFile2)
-  return format === 'asTree' ? stylish(tree) : 'plain'
+  return formatter(tree, format)
 }
 
 export { getDiff, buildTree }
