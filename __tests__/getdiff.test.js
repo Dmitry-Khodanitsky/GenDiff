@@ -1,4 +1,3 @@
-
 import { expect, test } from '@jest/globals'
 import { buildTree } from '../src/getdiff.js'
 
