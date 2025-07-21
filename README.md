@@ -14,3 +14,6 @@
 
 ### stylish formatter
 [![asciicast](https://asciinema.org/a/jrGFSQTa2TSXs8zJnM9jA8raJ.svg)](https://asciinema.org/a/jrGFSQTa2TSXs8zJnM9jA8raJ) 
+
+### plain formatter
+[![asciicast](https://asciinema.org/a/fqyGDcSNoUU1XcFXq1Dj150DE.svg)](https://asciinema.org/a/fqyGDcSNoUU1XcFXq1Dj150DE)
