@@ -12,7 +12,13 @@ program
   .argument('<filepath2>')
   .description('Compares two configuration files and shows a difference.')
   .version('0.0.1')
-  .option('-f, --format <type>', 'output format (default: stylish)', 'stylish', 'plain', 'json')
+  .option(
+    '-f, --format <type>',
+    'output format (default: stylish)',
+    'stylish',
+    'plain',
+    'json'
+  )
   .action((filepath1, filepath2, options) => {
     const __filename = fileURLToPath(import.meta.url)
     const __dirname = path.dirname(__filename)
@@ -21,18 +27,18 @@ program
       process.cwd(),
       __dirname,
       '..',
-      filepath1,
+      filepath1
     )
     const fullPathFile2 = path.resolve(
       process.cwd(),
       __dirname,
       '..',
-      filepath2,
+      filepath2
     )
     const parsedFile1 = parseData(fullPathFile1.toLowerCase())
     const parsedFile2 = parseData(fullPathFile2.toLowerCase())
 
     console.log(getDiff(parsedFile1, parsedFile2, options.format))
   })
-// добавить возможность передавать аргументы и вызывать тут функцию получения абсолютного пути
+
 program.parse()
