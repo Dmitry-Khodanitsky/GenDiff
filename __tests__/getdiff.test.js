@@ -1,7 +1,6 @@
-import path from 'path'
-import { fileURLToPath } from 'url'
+
 import { expect, test } from '@jest/globals'
-import { getDiff, buildTree } from '../src/getdiff.js'
+import { buildTree } from '../src/getdiff.js'
 
 import { buildedTree, objData, objData2 } from '../__fixtures__/testData.js'
 
