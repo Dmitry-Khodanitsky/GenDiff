@@ -6,13 +6,9 @@ import fs from 'fs'
 import path from 'path'
 
 // Читаем фикстуру
-
-test('Test formatting as tree', () => {
+test('Test formatting as JSON', () => {
   const expected = fs
-    .readFileSync(
-      path.join(__dirname, 'jsonFormat.json'),
-      'utf-8',
-    )
+    .readFileSync(path.join(__dirname, 'expectedResultJSON.json'), 'utf-8')
     .trim()
 
   expect(convertToJson(buildedTree)).toBe(expected)
