@@ -1,4 +1,4 @@
-const asTree = `{
+export const stylishResult = `{
     common: {
       + follow: false
         setting1: Value 1
@@ -42,5 +42,3 @@ const asTree = `{
         fee: 100500
     }
 }`
-
-export { asTree }
