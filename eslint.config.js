@@ -1,26 +1,22 @@
+import js from '@eslint/js'
 import globals from 'globals'
+import { defineConfig } from 'eslint/config'
 import stylistic from '@stylistic/eslint-plugin'
 
-export default [
-  stylistic.configs.recommended, // Стилистические правила для всех файлов
-
-  // ЕДИНЫЙ блок для JS-файлов
+export default defineConfig([
+  stylistic.configs.recommended,
   {
     files: ['**/*.{js,mjs,cjs}'],
-    plugins: {
-      // js: ← это лишнее, @eslint/js не нужно регистрировать как плагин
-    },
+    plugins: { js },
+    extends: ['js/recommended'],
+  },
+  {
+    files: ['**/*.{js,mjs,cjs}', '__tests__/**/*.js'],
     languageOptions: {
       globals: {
-        ...globals.browser,
         ...globals.node,
+        ...globals.jest,
       },
-      parserOptions: {
-        ecmaVersion: 'latest',
-      },
-    },
-    rules: {
-      // Все JS-специфичные правила здесь
     },
   },
-]
+])
