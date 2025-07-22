@@ -9,6 +9,7 @@ function plain(tree) {
 
         const stringify = (value) => {
           if (value === null) return 'null'
+          if (typeof value === 'number') return value
           if (typeof value === 'boolean') return value.toString()
           if (_.isObject(value) && !Array.isArray(value)) return '[complex value]'
           return `'${value}'`
