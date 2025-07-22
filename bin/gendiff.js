@@ -1,44 +1,23 @@
 #!/usr/bin/env node
 import { Command } from 'commander'
-import path from 'path'
-import { fileURLToPath } from 'url'
-import { parseData, getDiff } from '../index.js'
+import genDiff from '../index.js'
 
 const program = new Command()
 
 program
-  .name('gendiff')
   .argument('<filepath1>')
   .argument('<filepath2>')
   .description('Compares two configuration files and shows a difference.')
-  .version('0.0.1')
+  .version('0.0.1', '-v, --version', 'output the version number')
   .option(
     '-f, --format <type>',
-    'output format (default: stylish)',
+    'output formats: "stylish", "plain", "json"',
     'stylish',
     'plain',
     'json',
   )
-  .action((filepath1, filepath2, options) => {
-    const __filename = fileURLToPath(import.meta.url)
-    const __dirname = path.dirname(__filename)
-
-    const fullPathFile1 = path.resolve(
-      process.cwd(),
-      __dirname,
-      '..',
-      filepath1,
-    )
-    const fullPathFile2 = path.resolve(
-      process.cwd(),
-      __dirname,
-      '..',
-      filepath2,
-    )
-    const parsedFile1 = parseData(fullPathFile1.toLowerCase())
-    const parsedFile2 = parseData(fullPathFile2.toLowerCase())
-
-    console.log(getDiff(parsedFile1, parsedFile2, options.format))
+  .action((filepath1, filepath2) => {
+    console.log(genDiff(filepath1, filepath2, program.opts().format))
   })
 
 program.parse()
