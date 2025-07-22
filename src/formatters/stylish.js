@@ -12,7 +12,7 @@ const stringify = (data, depth) => {
   const currentReplacer = replacer.repeat(depth + 1) // (depth + 1) * 4 для ключей
   const entries = Object.entries(data)
   const strings = entries.map(
-    ([key, value]) => `${currentReplacer}${key}: ${stringify(value, depth + 1)}`
+    ([key, value]) => `${currentReplacer}${key}: ${stringify(value, depth + 1)}`,
   )
   return `{\n${strings.join('\n')}\n${replacer.repeat(depth)}}` // depth * 4 для закрывающей скобки
 }

@@ -17,7 +17,7 @@ program
     'output format (default: stylish)',
     'stylish',
     'plain',
-    'json'
+    'json',
   )
   .action((filepath1, filepath2, options) => {
     const __filename = fileURLToPath(import.meta.url)
@@ -27,13 +27,13 @@ program
       process.cwd(),
       __dirname,
       '..',
-      filepath1
+      filepath1,
     )
     const fullPathFile2 = path.resolve(
       process.cwd(),
       __dirname,
       '..',
-      filepath2
+      filepath2,
     )
     const parsedFile1 = parseData(fullPathFile1.toLowerCase())
     const parsedFile2 = parseData(fullPathFile2.toLowerCase())
