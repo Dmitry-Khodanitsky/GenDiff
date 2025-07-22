@@ -1,6 +1,7 @@
 import { stylish } from './stylish.js'
 import { plain } from './plain.js'
 import { convertToJson } from './json.js'
+
 export default function (tree, format) {
   switch (format) {
     case 'stylish':
