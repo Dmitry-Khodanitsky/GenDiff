@@ -10,8 +10,8 @@ const getPath = filename =>
 
 const readFile = filename => fs.readFileSync(getPath(filename), 'utf-8')
 
-const getExtension = (filepath) => {
-  return path.extname(filepath.toLowerCase()).slice(1)
+const getExtension = (filename) => {
+  return path.extname(filename.toLowerCase()).slice(1)
 }
 
 export { readFile, getExtension }
