@@ -14,12 +14,12 @@ const testData = [
 
 describe.each(testData)(
   'Позитивный тест функции genDiff',
-  (pathfile1, pathfile2, format, expected) => {
+  (filename1, filename2, format, expected) => {
     test(`Формат вывода ${format} для файлов ${path.extname(
-      pathfile1,
-    )} и ${path.extname(pathfile2)}`, () => {
+      filename1,
+    )} и ${path.extname(filename2)}`, () => {
       expect(
-        genDiff(pathfile1, pathfile2, format),
+        genDiff(filename1, filename2, format),
       ).toEqual(expected)
     })
   },

@@ -1,8 +1,8 @@
 import yaml from 'js-yaml'
 import { readFile } from './helpers.js'
 
-function parseData(filepath, format) {
-  const content = readFile(filepath)
+function parseData(filename, format) {
+  const content = readFile(filename)
   switch (format) {
     case 'json':
       return JSON.parse(content)

@@ -16,8 +16,8 @@ program
     'plain',
     'json',
   )
-  .action((filepath1, filepath2) => {
-    console.log(genDiff(filepath1, filepath2, program.opts().format))
+  .action((filename1, filename2) => {
+    console.log(genDiff(filename1, filename2, program.opts().format))
   })
 
 program.parse()
