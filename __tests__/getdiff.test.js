@@ -8,8 +8,8 @@ import genDiff from '../src/genDiff'
 const testData = [
   ['file1.json', 'file2.json', 'stylish', stylishResult],
   ['file1.json', 'file2.yml', 'plain', plainResult],
-  ['file1.YAML', 'file2.yml', 'stylish', stylishResult],
-  ['file1.json', 'file2.YAML', 'json', jsonResult],
+  ['file1.yaml', 'file2.yml', 'stylish', stylishResult],
+  ['file1.json', 'file2.yaml', 'json', jsonResult],
 ]
 
 describe.each(testData)(
