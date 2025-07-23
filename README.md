@@ -8,17 +8,11 @@
 
 [![Node CI](https://github.com/Dmitry-Khodanitsky/frontend-project-46/actions/workflows/nodejs.yml/badge.svg?branch=main)](https://github.com/Dmitry-Khodanitsky/frontend-project-46/actions/workflows/nodejs.yml)
 
-### JSON format
-[![asciicast](https://asciinema.org/a/727322.svg)](https://asciinema.org/a/727322)
-
-### YML/YAML format
-[![asciicast](https://asciinema.org/a/727773.svg)](https://asciinema.org/a/727773)
-
 ### stylish formatter
-[![asciicast](https://asciinema.org/a/jrGFSQTa2TSXs8zJnM9jA8raJ.svg)](https://asciinema.org/a/jrGFSQTa2TSXs8zJnM9jA8raJ) 
+[![asciicast](https://asciinema.org/a/QGz6ENU967EkoarHNyfGe1e1O.svg)](https://asciinema.org/a/QGz6ENU967EkoarHNyfGe1e1O)
 
 ### plain formatter
-[![asciicast](https://asciinema.org/a/fqyGDcSNoUU1XcFXq1Dj150DE.svg)](https://asciinema.org/a/fqyGDcSNoUU1XcFXq1Dj150DE)
+[![asciicast](https://asciinema.org/a/QFMobou9LJhryrTc6v1l8OXVF.svg)](https://asciinema.org/a/QFMobou9LJhryrTc6v1l8OXVF)
 
 ### json formatter 
-[![asciicast](https://asciinema.org/a/hEMqlHilOPnOPZ1isGSELZhTD.svg)](https://asciinema.org/a/hEMqlHilOPnOPZ1isGSELZhTD)
+[![asciicast](https://asciinema.org/a/8Xd7B51yDUsRxmhZNQjH36rCb.svg)](https://asciinema.org/a/8Xd7B51yDUsRxmhZNQjH36rCb)
