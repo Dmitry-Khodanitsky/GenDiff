@@ -1,15 +1,9 @@
 import { expect, test } from '@jest/globals'
 import path from 'path'
-import { fileURLToPath } from 'url'
 import { plainResult } from '../__fixtures__/expectedResultPlain'
 import { stylishResult } from '../__fixtures__/expectedResultStylish'
 import { jsonResult } from '../__fixtures__/expectedResultJSON'
 import genDiff from '../src/genDiff'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const getFixturePath = filename =>
-  path.join(__dirname, '..', '__fixtures__', filename)
 
 const testData = [
   ['file1.json', 'file2.json', 'stylish', stylishResult],
@@ -25,7 +19,7 @@ describe.each(testData)(
       pathfile1,
     )} и ${path.extname(pathfile2)}`, () => {
       expect(
-        genDiff(getFixturePath(pathfile1), getFixturePath(pathfile2), format),
+        genDiff(pathfile1, pathfile2, format),
       ).toEqual(expected)
     })
   },
