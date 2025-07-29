@@ -10,14 +10,12 @@
 
 ### Difference finder
 This is a program that determines the difference between two data structures.
-Utility capabilities:
 Support for different input formats: yaml, yml, json.
 Generating a report in plain text, style and json formats
 
 ### Вычислитель отличий
 Это программа, определяющая разницу между двумя структурами данных. 
-Возможности утилиты:
-Поддержка разных входных форматов: yaml,yml, json
+Поддержка разных входных форматов: yaml, yml, json
 Генерация отчета в формате plain text, stylish и json
 
 ### stylish formatter
