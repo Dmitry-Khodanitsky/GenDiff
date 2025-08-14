@@ -30,7 +30,7 @@ function buildTree(parsedFile1, parsedFile2) {
     const value2 = parsedFile2[key]
 
     // Оба значения — объекты (и не null) → рекурсивный diff
-    if (_.isObject(value1) && _.isObject(value2)) {
+    if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
       return {
         type: 'nested', // или 'changed', если внутри есть изменения
         name: key,

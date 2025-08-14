@@ -3,7 +3,7 @@ import _ from 'lodash'
 const replacer = '    ' // 4 пробела
 
 const stringify = (data, depth) => {
-  if (!_.isObject(data)) {
+  if (!_.isPlainObject(data)) {
     if (data === null) return 'null'
     if (data === undefined || data === '') return ''
     return `${data}`
@@ -14,7 +14,9 @@ const stringify = (data, depth) => {
   const strings = entries.map(
     ([key, value]) => `${currentReplacer}${key}: ${stringify(value, depth + 1)}`,
   )
-  return `{\n${strings.join('\n')}\n${replacer.repeat(depth)}}` // depth * 4 для закрывающей скобки
+  return `{
+${strings.join('\n')}
+${replacer.repeat(depth)}}` // depth * 4 для закрывающей скобки
 }
 
 const stylish = (data) => {
@@ -39,7 +41,9 @@ const stylish = (data) => {
           throw new Error(`Unknown type: ${type}`)
       }
     })
-    return `{\n${result.join('\n')}\n${replacer.repeat(depth - 1)}}`
+    return `{
+${result.join('\n')}
+${replacer.repeat(depth - 1)}}`
   }
   return iter(data, 1)
 }

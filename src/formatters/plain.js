@@ -10,7 +10,7 @@ function plain(tree) {
         if (value === null) return 'null'
         if (typeof value === 'number') return value
         if (typeof value === 'boolean') return value.toString()
-        if (_.isObject(value) && !Array.isArray(value)) return '[complex value]'
+        if (_.isPlainObject(value)) return '[complex value]'
         return `'${value}'`
       }
 
